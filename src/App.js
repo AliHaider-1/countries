@@ -51,8 +51,8 @@ function imgClick(e){
   return (
    <div className="App-header bg-primary m-auto">
       <AppHeader />
-     <Search handleInput={handleInput} searchInput={searchInput} />
-     <Region handleSelect={handleSelect} data={countriesAll} />
+    {click ? <Search handleInput={handleInput} searchInput={searchInput} />:("")}
+    {click ? <Region handleSelect={handleSelect} data={countriesAll} />:("")}
     {click ? ( change ? <DisplayCountries data={filteredRegion} imgClick={imgClick}/> : <DisplayCountries data={filteredcountries} imgClick={imgClick}/>) : (<Detail data={clickcountry} /> )}
     </div>
     
