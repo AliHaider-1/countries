@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import AppHeader from "./AppHeader";
 import "./App.css"
 import DisplayCountries from "./DisplayCountries";
@@ -27,24 +27,19 @@ let  input = searchInput.toUpperCase();
       return item.flag.includes(image);
     })
 
-    console.log(clickcountry);
 
 function handleInput(e){
   setSearchInput(e.target.value);
-  console.log(searchInput);
   setchange(false)
 }
 
 function handleSelect(e){
   setSelect(e.target.value);
-  console.log("select:  "+select);
-  console.log(filteredRegion);
   setchange(true)
 }
 
 function imgClick(e){
    setImage(e.target.src);
-   console.log(image);
    setclick(false);
 }
     

@@ -6,12 +6,6 @@ function Detail({data}){
  console.log(border);
  let filteredborder1 = countriesAll.filter(x=>x.alpha3Code.includes(border[0]));
  let filteredborder2 = countriesAll.filter(x=>x.alpha3Code.includes(border[1]));
- let filteredborder3 = countriesAll.filter(x=>x.alpha3Code.includes(border[2]));
- let filteredborder4 = countriesAll.filter(x=>x.alpha3Code.includes(border[3]));
- let filteredborder5 = countriesAll.filter(x=>x.alpha3Code.includes(border[4]));
- let filteredborder6 = countriesAll.filter(x=>x.alpha3Code.includes(border[5]));
- console.log(filteredborder6);
-  
 
 
         return(

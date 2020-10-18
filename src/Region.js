@@ -10,9 +10,9 @@ import React from "react";
         onChange={handleSelect}
     >
         <option>Choose Region</option>
-    {filteredRegions.map((data)=>{
+    {filteredRegions.map((data,index)=>{
      return  (    
-     <option>{data}</option>
+     <option key= {index}>{data}</option>
   )
     })}
      
