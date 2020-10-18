@@ -3,14 +3,15 @@ import React from "react";
  function Region({handleSelect, data }){
     let regions = data.map((item)=>item.region);
     let filteredRegions = [...new Set(regions)]
-     filteredRegions.sort();
+    
     
   return (
     <select className="" 
         onChange={handleSelect}
     >
+        <option>Choose Region</option>
     {filteredRegions.map((data)=>{
-     return  (
+     return  (    
      <option>{data}</option>
   )
     })}
