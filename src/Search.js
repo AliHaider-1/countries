@@ -10,7 +10,7 @@ import React from "react";
         type="text"
         className="form-control"
         placeholder="Search"
-        onChange={(e)=>handleInput(e)}
+        onChange={handleInput}
       />
 
     </form>
