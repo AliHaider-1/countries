@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import countriesAll from "./countriesAll";
+import React from "react";
 import AppHeader from "./AppHeader";
 import "./App.css"
 import DisplayCountries from "./DisplayCountries";
