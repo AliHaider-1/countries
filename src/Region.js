@@ -9,8 +9,9 @@ import React from "react";
     <select className="" 
         onChange={handleSelect}
     >
-        <option>Choose Region</option>
+        <option value="">Choose Region</option>
     {filteredRegions.map((data,index)=>{
+      
      return  (    
      <option key= {index}>{data}</option>
   )

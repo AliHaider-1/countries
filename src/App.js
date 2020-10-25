@@ -8,6 +8,8 @@ import Region from "./Region";
 import Detail from "./Detail";
 function App() {
  let [ change , setchange] = useState(false);
+ let [ theme  , setTheme] = useState("primary");
+ 
   let [searchInput, setSearchInput] = useState("");
   let [select, setSelect] = useState("");
 
@@ -42,13 +44,22 @@ function imgClick(e){
    setImage(e.target.src);
    setclick(false);
 }
+
+function changeTheme(){
+  if(theme === "primary"){
+    setTheme("secondary")
+  }
+  else{
+    setTheme("primary")
+  }
+}
     
   return (
-   <div className="App-header bg-primary m-auto">
-      <AppHeader />
+   <div className={"App-header m-auto "+(theme)}>
+      <AppHeader changeTheme={changeTheme} theme={theme} />
     {click ? <Search handleInput={handleInput} searchInput={searchInput} />:("")}
     {click ? <Region handleSelect={handleSelect} data={countriesAll} />:("")}
-    {click ? ( change ? <DisplayCountries data={filteredRegion} imgClick={imgClick}/> : <DisplayCountries data={filteredcountries} imgClick={imgClick}/>) : (<Detail data={clickcountry} /> )}
+    {click ? ( change ? <DisplayCountries data={filteredRegion} imgClick={imgClick} theme={theme}/> : <DisplayCountries data={filteredcountries} imgClick={imgClick} theme={theme}/>) : (<Detail data={clickcountry} imgClick={imgClick} theme={theme} /> )}
     </div>
     
   );

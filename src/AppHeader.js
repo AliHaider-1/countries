@@ -1,8 +1,11 @@
 import React from "react";
 
-function header(){
-    return <header className=" m-3 text-light ">Countries Around the World</header> 
-   
+function header({changeTheme , theme}){
+    return ( <div>
+    <header className={" m-3 "+(theme)}>Countries Around the World</header> 
+     <button onClick={changeTheme}>Change Theme</button>
+    </div>
+    )
 }
 
 export default header;
