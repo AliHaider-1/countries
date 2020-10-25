@@ -5,8 +5,8 @@ function Detail({data , imgClick ,theme}){
         return(
           <div>  
               <button className="btn-warning" onClick={()=>{window.location.reload()}}>Back</button>
-          <div className={"container col-12 row  m-auto "+(theme)}>
-          <div className="card col-4  m-auto "  id={data.name}>
+          <div className={"col-12  row m-auto  "+(theme)}>
+          <div className="card col-lg-5 col-xs-12 col-md-4 m-3  "  id={data.name}>
             <div className="cardbody">
             <img className="col-10  m-auto " src={data[0].flag} alt="" width="100" height="300" />
             <h4 className=" m-2">{data[0].name}</h4>
@@ -27,15 +27,15 @@ function Detail({data , imgClick ,theme}){
              
         
           
-        <div>
-            <h3 className="">Neighbouring Countries </h3>
+        <div className="col-6 row  m-auto ">
+            <h3 className="col-12 m-auto ">Neighbouring Countries </h3>
             {border.map(function(item){
               console.log(item);
              let border1 =countriesAll.filter(x=>x.alpha3Code.includes(item));
              console.log(border1);
               return (
-                <div className="col-5">
-              <div className="card   m-auto "  id={border1[0].name}>
+                <div className="col-lg-4 col-md-8 col-xs-12 m-auto ">
+              <div className="card col-lg-12 col-xs-12 col-md-12 m-3 "  id={border1[0].name}>
             <div className="cardbody">
             <img className="col-10  m-auto " src={border1[0].flag} alt="" width="100" height="300" onClick={imgClick}   />
             <h4 className=" m-2">{border1[0].name}</h4>

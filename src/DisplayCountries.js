@@ -4,10 +4,10 @@ function DisplayCountries({data ,imgClick ,theme}){
     
    
         return(
-          <div className={"container col-12 row m-auto "+(theme)}>
+          <div className={"container col-12  row m-auto "+(theme)}>
       {data.map((data,index) => {
         return (
-          <div key={index} className={"card col-2  m-3 "}  id={data.name}>
+          <div key={index} className={"card col-lg-2 col-xs-12 col-md-3 m-3 "}  id={data.name}>
             <div className="cardbody">
             <img className="col-9  m-auto " src={data.flag} alt="" width="100" height="200" onClick={imgClick}/>
             <h4 className=" m-2">{data.name}</h4>
